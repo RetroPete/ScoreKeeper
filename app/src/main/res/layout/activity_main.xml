@@ -1,153 +1,160 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
+<ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@drawable/basketball_180">
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
 
-    <LinearLayout
-        android:layout_width="match_parent"
+    <RelativeLayout
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:background="@drawable/basketball_180">
 
         <LinearLayout
-            android:layout_width="0dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:orientation="vertical"
-            tools:context="MainActivity">
+            android:orientation="horizontal"
+            android:id="@+id/linearLayout">
 
-            <EditText
-                android:layout_width="match_parent"
+            <LinearLayout
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:gravity="center_horizontal"
-                android:padding="16dp"
-                android:hint="@string/team_name"
-                android:textSize="14sp"
-                android:inputType="textCapWords"/>
+                android:layout_weight="1"
+                android:orientation="vertical"
+                tools:context="MainActivity">
 
-            <TextView
-                android:id="@+id/team_a_score"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center_horizontal"
-                android:paddingBottom="24dp"
-                android:text="@string/team_score"
-                android:textSize="56sp"
-                android:textColor="#000000"
-                android:fontFamily="sans-serif-light"/>
+                <EditText
+                    android:id="@+id/team_a_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:hint="@string/team_name"
+                    android:inputType="textCapWords"
+                    android:padding="16dp"
+                    android:textSize="14sp" />
 
-            <Button
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="24dp"
-                android:layout_marginRight="24dp"
-                android:layout_marginBottom="8dp"
-                android:onClick="addThreeForTeamA"
-                android:text="@string/three_points"
-                android:drawableLeft="@drawable/basketball_icon"/>
+                <TextView
+                    android:id="@+id/team_a_score"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-light"
+                    android:gravity="center_horizontal"
+                    android:paddingBottom="24dp"
+                    android:text="@string/team_score"
+                    android:textColor="#000000"
+                    android:textSize="56sp" />
 
-            <Button
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="24dp"
-                android:layout_marginRight="24dp"
-                android:layout_marginBottom="8dp"
-                android:onClick="addTwoForTeamA"
-                android:text="@string/two_points"
-                android:drawableLeft="@drawable/basketball_icon"/>
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginRight="24dp"
+                    android:drawableLeft="@drawable/basketball_icon"
+                    android:onClick="addThreeForTeamA"
+                    android:text="@string/three_points" />
 
-            <Button
-                android:layout_width="match_parent"
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginRight="24dp"
+                    android:drawableLeft="@drawable/basketball_icon"
+                    android:onClick="addTwoForTeamA"
+                    android:text="@string/two_points" />
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginRight="24dp"
+                    android:drawableLeft="@drawable/basketball_icon"
+                    android:onClick="addOneForTeamA"
+                    android:text="@string/one_point" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:layout_marginTop="16dp"
+                android:background="@android:color/darker_gray" />
+
+            <LinearLayout
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="24dp"
-                android:layout_marginRight="24dp"
-                android:layout_marginBottom="8dp"
-                android:onClick="addOneForTeamA"
-                android:text="@string/one_point"
-                android:drawableLeft="@drawable/basketball_icon"/>
+                android:layout_weight="1"
+                android:orientation="vertical"
+                tools:context="MainActivity">
+
+                <EditText
+                    android:id="@+id/team_b_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:hint="@string/team_name"
+                    android:inputType="textCapWords"
+                    android:padding="16dp"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/team_b_score"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-light"
+                    android:gravity="center_horizontal"
+                    android:paddingBottom="24dp"
+                    android:text="@string/team_score"
+                    android:textColor="#000000"
+                    android:textSize="56sp" />
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginRight="24dp"
+                    android:drawableLeft="@drawable/basketball_icon"
+                    android:onClick="addThreeForTeamB"
+                    android:text="@string/three_points" />
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginRight="24dp"
+                    android:drawableLeft="@drawable/basketball_icon"
+                    android:onClick="addTwoForTeamB"
+                    android:text="@string/two_points" />
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginRight="24dp"
+                    android:drawableLeft="@drawable/basketball_icon"
+                    android:onClick="addOneForTeamB"
+                    android:text="@string/one_point" />
+
+            </LinearLayout>
 
         </LinearLayout>
 
-        <View
-            android:layout_width="1dp"
-            android:layout_height="match_parent"
-            android:layout_marginTop="16dp"
-            android:background="@android:color/darker_gray"/>
+        <Button
+            android:id="@+id/reset"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_below="@+id/linearLayout"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="80dp"
+            android:background="@drawable/basketball_icon_1"
+            android:onClick="resetScore"
+            android:text="@string/reset"
+            android:textColor="@android:color/white" />
 
-        <LinearLayout
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:orientation="vertical"
-            tools:context="MainActivity">
-
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center_horizontal"
-                android:padding="16dp"
-                android:hint="@string/team_name"
-                android:textSize="14sp"
-                android:inputType="textCapWords"/>
-
-            <TextView
-                android:id="@+id/team_b_score"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center_horizontal"
-                android:paddingBottom="24dp"
-                android:text="@string/team_score"
-                android:textSize="56sp"
-                android:textColor="#000000"
-                android:fontFamily="sans-serif-light"/>
-
-            <Button
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="24dp"
-                android:layout_marginRight="24dp"
-                android:layout_marginBottom="8dp"
-                android:onClick="addThreeForTeamB"
-                android:text="@string/three_points"
-                android:drawableLeft="@drawable/basketball_icon"
-                />
-
-            <Button
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="24dp"
-                android:layout_marginRight="24dp"
-                android:layout_marginBottom="8dp"
-                android:onClick="addTwoForTeamB"
-                android:text="@string/two_points"
-                android:drawableLeft="@drawable/basketball_icon"/>
-
-            <Button
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="24dp"
-                android:layout_marginRight="24dp"
-                android:layout_marginBottom="8dp"
-                android:onClick="addOneForTeamB"
-                android:text="@string/one_point"
-                android:drawableLeft="@drawable/basketball_icon"/>
-
-        </LinearLayout>
-
-    </LinearLayout>
-
-    <Button
-        android:id="@+id/reset"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="32dp"
-        android:textColor="@android:color/white"
-        android:background="@drawable/basketball_icon_1"
-        android:onClick="resetScore"
-        android:text="@string/reset" />
-
-</RelativeLayout>
+    </RelativeLayout>
+</ScrollView>
