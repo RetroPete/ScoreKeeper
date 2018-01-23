@@ -28,12 +28,12 @@ public class MainActivity extends AppCompatActivity {
     //onSaveInstanceState
     @Override
     public void onSaveInstanceState(Bundle outState) {
-
         super.onSaveInstanceState(outState);
         outState.putInt(scoreTeam_A, scoreTeamA);
         outState.putInt(scoreTeam_B, scoreTeamB);
         outState.putInt(scoreTeamA_Save, scoreTeamASave);
         outState.putInt(scoreTeamB_Save, scoreTeamBSave);
+
         outState.putString("TeamAName", teamAName);
         outState.putString("TeamBName", teamBName);
     }
@@ -41,7 +41,6 @@ public class MainActivity extends AppCompatActivity {
     //onRestoreInstanceState
     @Override
     public void onRestoreInstanceState(Bundle savedInstanceState) {
-
         super.onRestoreInstanceState(savedInstanceState);
 
         // Restore UI state from the savedInstanceState.
@@ -50,6 +49,7 @@ public class MainActivity extends AppCompatActivity {
         scoreTeamB = savedInstanceState.getInt (scoreTeam_B);
         scoreTeamASave = savedInstanceState.getInt(scoreTeamA_Save);
         scoreTeamBSave = savedInstanceState.getInt (scoreTeamB_Save);
+
         teamAName = savedInstanceState.getString("TeamAName");
         teamBName = savedInstanceState.getString("TeamBName");
 
